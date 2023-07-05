@@ -15,7 +15,7 @@ const Header = () => {
           <li className="flex h-max w-max items-center justify-center">
             <NavLink to="/" caseSensitive>
               <img
-                className="h-44 w-44 object-contain max-sm:h-12 small:h-16 large:h-20"
+                className="h-44 w-56 object-contain max-sm:h-12 small:h-16 large:h-20"
                 src="/png/logoHome.png"
               />
             </NavLink>

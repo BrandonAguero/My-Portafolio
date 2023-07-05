@@ -17,12 +17,12 @@ function App() {
       <Header />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-me" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact-me" element={<ContactPage />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/education" element={<EducationPage />} />
+          <Route caseSensitive path="/" element={<Home />} />
+          <Route caseSensitive path="/about-me" element={<AboutPage />} />
+          <Route caseSensitive path="/projects" element={<ProjectsPage />} />
+          <Route caseSensitive path="/contact-me" element={<ContactPage />} />
+          <Route caseSensitive path="/skills" element={<SkillsPage />} />
+          <Route caseSensitive path="/education" element={<EducationPage />} />
         </Routes>
       </AnimatePresence>
     </>

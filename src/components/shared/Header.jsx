@@ -25,6 +25,7 @@ const Header = () => {
                   ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
                   : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
               }
+              caseSensitive
             >
               Acerca de mí
             </NavLink>
@@ -39,6 +40,7 @@ const Header = () => {
                   ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
                   : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
               }
+              caseSensitive
             >
               Proyectos
             </NavLink>
@@ -53,6 +55,7 @@ const Header = () => {
                   ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
                   : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
               }
+              caseSensitive
             >
               Contáctame
             </NavLink>
@@ -67,6 +70,7 @@ const Header = () => {
                   ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
                   : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
               }
+              caseSensitive
             >
               Educación
             </NavLink>
@@ -81,6 +85,7 @@ const Header = () => {
                   ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
                   : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
               }
+              caseSensitive
             >
               Habilidades
             </NavLink>

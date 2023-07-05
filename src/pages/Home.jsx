@@ -1,8 +1,10 @@
+import { motion } from "framer-motion";
+
 const Home = () => {
   return (
-    <div>
+    <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <h1>ESte es el home</h1>
-    </div>
+    </motion.main>
   );
 };
 

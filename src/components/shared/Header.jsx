@@ -10,8 +10,8 @@ const Header = () => {
 
   return (
     <header className="flex h-20 w-full">
-      <nav className="fixed top-0 z-10 flex w-full flex-col bg-gray-100">
-        <ul className="flex w-full items-center justify-between px-2">
+      <nav className="fixed top-0 z-10 flex w-full flex-col bg-gray-100 xl:flex-row xl:items-center xl:justify-between">
+        <ul className="flex w-full items-center justify-between px-2 xl:w-max">
           <li className="flex h-max w-max items-center justify-center">
             <NavLink to="/" caseSensitive>
               <img
@@ -21,7 +21,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="h-max w-max">
-            <div className="flex items-center justify-center sm:hidden">
+            <div className="flex items-center justify-center xl:hidden">
               {isItOpen ? (
                 <button className="z-20" onClick={handleIsItOpen}>
                   <i className="bx bx-x text-4xl small:text-5xl large:text-6xl"></i>
@@ -35,12 +35,12 @@ const Header = () => {
           </li>
         </ul>
         <div
-          className={`z-10 h-screen w-full transform bg-gray-100 max-sm:fixed max-sm:top-0 ${
-            isItOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-500`}
+          className={`z-10 w-full bg-gray-100 max-xl:fixed max-xl:top-0 max-xl:h-screen max-xl:transform sm:bg-transparent sm:backdrop-brightness-90 xl:w-max  xl:px-2 xl:backdrop-brightness-100 ${
+            isItOpen ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
+          } max-xl:transition-transform max-xl:duration-500`}
         >
-          <ul className="flex gap-2 max-sm:h-screen max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:gap-4 small:gap-6 medium:gap-8">
-            <li className="sm:hidden">
+          <ul className="flex items-center gap-2 bg-gray-100 max-xl:h-screen max-xl:flex-col max-xl:justify-center max-sm:gap-4 small:gap-6 medium:gap-8 sm:absolute sm:right-0 sm:w-96 xl:static xl:w-max">
+            <li onClick={handleIsItOpen} className="xl:hidden">
               <NavLink to="/">
                 <img
                   className="w-64 object-contain"
@@ -48,7 +48,7 @@ const Header = () => {
                 />
               </NavLink>
             </li>
-            <li className="w-max">
+            <li onClick={handleIsItOpen} className="w-max">
               <NavLink
                 to="/about-me"
                 className={({ isActive, isPending }) =>
@@ -63,7 +63,7 @@ const Header = () => {
                 Acerca de mí
               </NavLink>
             </li>
-            <li className="w-max">
+            <li onClick={handleIsItOpen} className="w-max">
               <NavLink
                 to="/projects"
                 className={({ isActive, isPending }) =>
@@ -78,7 +78,7 @@ const Header = () => {
                 Proyectos
               </NavLink>
             </li>
-            <li className="w-max">
+            <li onClick={handleIsItOpen} className="w-max">
               <NavLink
                 to="/contact-me"
                 className={({ isActive, isPending }) =>
@@ -93,7 +93,7 @@ const Header = () => {
                 Contáctame
               </NavLink>
             </li>
-            <li className="w-max">
+            <li onClick={handleIsItOpen} className="w-max">
               <NavLink
                 to="/education"
                 className={({ isActive, isPending }) =>
@@ -108,7 +108,7 @@ const Header = () => {
                 Educación
               </NavLink>
             </li>
-            <li className="w-max">
+            <li onClick={handleIsItOpen} className="w-max">
               <NavLink
                 to="/skills"
                 className={({ isActive, isPending }) =>

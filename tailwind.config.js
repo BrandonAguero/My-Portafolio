@@ -9,6 +9,10 @@ export default {
         large: "430px",
         super: "540px",
         normal: "600px",
+        "2md": "880px",
+      },
+      fontFamily: {
+        "dancing-script": ["Dancing Script", "cursive"],
       },
     },
   },

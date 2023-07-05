@@ -11,9 +11,6 @@ export default {
         normal: "600px",
         "2md": "880px",
       },
-      fontFamily: {
-        "dancing-script": ["Dancing Script", "cursive"],
-      },
     },
   },
   plugins: [],

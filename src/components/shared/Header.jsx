@@ -11,7 +11,7 @@ const Header = () => {
   console.log(window.scrollY);
 
   return (
-    <header className="flex h-20 w-full">
+    <header className="flex min-h-[8rem] w-full">
       <nav className="fixed top-0 z-10 flex h-24 w-full flex-col justify-center bg-gray-100 xl:flex-row xl:items-center xl:justify-between">
         <ul className="flex w-full items-center justify-between px-2 xl:w-max">
           <li className="flex h-max w-max items-center justify-center">

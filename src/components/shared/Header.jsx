@@ -1,14 +1,22 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isItOpen, setIsItOpen] = useState(false);
+  const [isItDark, setIsItDark] = useState(false);
+
+  const toggleSwitch = () => setIsItDark(!isItDark);
 
   const handleIsItOpen = () => {
     setIsItOpen(!isItOpen);
   };
 
-  console.log(window.scrollY);
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30,
+  };
 
   return (
     <header className="flex min-h-[8rem] w-full">
@@ -124,6 +132,19 @@ const Header = () => {
               >
                 Habilidades
               </NavLink>
+            </li>
+            <li className="absolute right-4 top-[45%] small:right-8 medium:right-12 large:right-16 super:right-24 normal:right-36 sm:right-8 xl:static">
+              <div
+                className="switch"
+                data-ison={isItDark}
+                onClick={toggleSwitch}
+              >
+                <motion.button
+                  className={`handle ${isItDark && "bg-black"}`}
+                  layout
+                  transition={spring}
+                ></motion.button>
+              </div>
             </li>
           </ul>
         </div>

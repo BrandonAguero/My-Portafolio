@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="flex h-20 w-full">
-      <nav className="fixed top-0 z-10 flex w-full flex-col bg-gray-100 xl:flex-row xl:items-center xl:justify-between">
+      <nav className="fixed top-4 z-10 flex w-full flex-col bg-gray-100 xl:flex-row xl:items-center xl:justify-between">
         <ul className="flex w-full items-center justify-between px-2 xl:w-max">
           <li className="flex h-max w-max items-center justify-center">
             <NavLink to="/" caseSensitive>

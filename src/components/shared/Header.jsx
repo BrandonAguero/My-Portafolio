@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -8,12 +8,28 @@ const Header = () => {
 
   const toggleSwitch = () => {
     setIsItDark(!isItDark);
+
     if (isItDark) {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     } else {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
   };
+
+  useEffect(() => {
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      ("theme" in localStorage &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      setIsItDark(!isItDark);
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
 
   const handleIsItOpen = () => {
     setIsItOpen(!isItOpen);

@@ -95,13 +95,13 @@ const Header = () => {
                 onClick={handleIsItOpen}
               >
                 <span
-                  className={`${transitionLeftX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500`}
+                  className={`${transitionLeftX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500 dark:bg-gray-50`}
                 ></span>
                 <span
-                  className={`${transitionCenterX} ml-8 inline-block h-1 w-9 origin-0-100 bg-gray-900 transition-transform duration-500`}
+                  className={`${transitionCenterX} ml-8 inline-block h-1 w-9 origin-0-100 bg-gray-900 transition-transform duration-500 dark:bg-gray-50`}
                 ></span>
                 <span
-                  className={`${transitionRightX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500`}
+                  className={`${transitionRightX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500 dark:bg-gray-50`}
                 ></span>
               </button>
             </div>

@@ -18,15 +18,15 @@ const Home = () => {
         <section className="flex w-[95%] flex-col gap-2 medium:gap-4 super:gap-6 2md:gap-8">
           <div className="flex flex-col gap-2 super:gap-4">
             <h1 className="flex flex-col font-serif text-3xl font-bold text-gray-800 dark:text-gray-50 small:text-4xl super:text-5xl 2md:text-6xl xl:text-7xl">
-              <span>Hola,</span>
-              <span>soy Brandon Agüero</span>
+              <span>Hola, soy</span>
+              <span>Brandon Agüero</span>
             </h1>
             <h2 className="font-serif text-xl font-semibold text-gray-700 dark:text-gray-100 small:text-2xl super:text-3xl 2md:text-4xl xl:text-5xl">
               Frontend Developer
             </h2>
             <p className="font-sans text-base font-normal text-gray-600 dark:text-gray-200 small:text-lg super:text-xl 2md:text-2xl xl:text-3xl">
               ¡Bienvenido a mi página web! Soy estudiante de Academlo. Explora
-              mis proyectos y habilidades, y no dudes en contactarme para
+              mis proyectos, habilidades y más. No dudes en contactarme para
               colaborar en emocionantes proyectos.
             </p>
           </div>

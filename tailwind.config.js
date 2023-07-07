@@ -16,6 +16,9 @@ export default {
         logoLight: "url('/png/logoHomeLight.png')",
         logoDark: "url('/png/logoHomeDark.png')",
       },
+      transformOrigin: {
+        "0-100": "8% 25%",
+      },
     },
   },
   plugins: [],

@@ -5,6 +5,9 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const [isItOpen, setIsItOpen] = useState(false);
   const [isItDark, setIsItDark] = useState(false);
+  const [transitionLeftX, setTransitionLeftX] = useState("");
+  const [transitionRightX, setTransitionRightX] = useState("");
+  const [transitionCenterX, setTransitionCenterX] = useState("");
 
   const toggleSwitch = () => {
     setIsItDark(!isItDark);
@@ -33,6 +36,15 @@ const Header = () => {
 
   const handleIsItOpen = () => {
     setIsItOpen(!isItOpen);
+    if (isItOpen) {
+      setTransitionLeftX("");
+      setTransitionRightX("");
+      setTransitionCenterX("");
+    } else {
+      setTransitionLeftX("-translate-x-[2px] translate-y-[1px] rotate-45");
+      setTransitionRightX("-translate-x-1 translate-y-[2px] -rotate-45");
+      setTransitionCenterX("opacity-0 -translate-x-10");
+    }
   };
 
   const routes = [
@@ -78,15 +90,20 @@ const Header = () => {
           </li>
           <li className="h-max w-max">
             <div className="flex items-center justify-center xl:hidden">
-              {isItOpen ? (
-                <button className="z-20" onClick={handleIsItOpen}>
-                  <i className="bx bx-x text-4xl dark:text-gray-50 small:text-5xl large:text-6xl"></i>
-                </button>
-              ) : (
-                <button className="z-20" onClick={handleIsItOpen}>
-                  <i className="bx bx-menu text-4xl dark:text-gray-50 small:text-5xl large:text-6xl"></i>
-                </button>
-              )}
+              <button
+                className="z-20 flex w-max flex-col items-end gap-[6px]"
+                onClick={handleIsItOpen}
+              >
+                <span
+                  className={`${transitionLeftX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500`}
+                ></span>
+                <span
+                  className={`${transitionCenterX} ml-8 inline-block h-1 w-9 origin-0-100 bg-gray-900 transition-transform duration-500`}
+                ></span>
+                <span
+                  className={`${transitionRightX} inline-block h-1 w-9 origin-0-100 transform bg-gray-900 transition-transform duration-500`}
+                ></span>
+              </button>
             </div>
           </li>
         </ul>

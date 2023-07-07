@@ -30,7 +30,7 @@ const Home = () => {
               colaborar en emocionantes proyectos.
             </p>
           </div>
-          <footer className="flex justify-center md:justify-start">
+          <footer className="flex justify-center pb-2 medium:pb-4 super:pb-6 md:justify-start md:pb-0">
             <ul className="flex w-[93%] flex-wrap justify-center gap-4 max-large:max-w-[15rem] super:gap-6 md:justify-start">
               <li className="text-base">
                 <a

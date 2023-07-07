@@ -56,7 +56,7 @@ const Header = () => {
             isItOpen ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
           } max-xl:transition-transform max-xl:duration-500`}
         >
-          <ul className="flex items-center gap-2 text-gray-50 max-xl:h-screen max-xl:flex-col max-xl:justify-center max-sm:gap-4 small:gap-6 medium:gap-8 sm:absolute sm:right-0 sm:w-96 xl:static xl:w-max">
+          <ul className="flex items-center gap-2 text-gray-50 max-xl:h-screen max-xl:flex-col max-xl:justify-center max-xl:bg-gray-100 max-sm:gap-4 small:gap-6 medium:gap-8 sm:absolute sm:right-0 sm:w-96 xl:static xl:w-max">
             <li onClick={handleIsItOpen} className="xl:hidden">
               <NavLink to="/">
                 <img

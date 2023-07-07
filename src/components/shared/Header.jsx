@@ -6,7 +6,14 @@ const Header = () => {
   const [isItOpen, setIsItOpen] = useState(false);
   const [isItDark, setIsItDark] = useState(false);
 
-  const toggleSwitch = () => setIsItDark(!isItDark);
+  const toggleSwitch = () => {
+    setIsItDark(!isItDark);
+    if (isItDark) {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  };
 
   const handleIsItOpen = () => {
     setIsItOpen(!isItOpen);

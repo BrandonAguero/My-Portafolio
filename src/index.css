@@ -15,7 +15,7 @@
   }
   @media screen and (min-width: 1280px) {
     .switch {
-      width: 144px;
+      width: 120px;
       height: 52.8px;
       justify-content: start;
       align-items: center;

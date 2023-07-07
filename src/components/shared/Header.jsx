@@ -64,11 +64,11 @@ const Header = () => {
             <div className="flex items-center justify-center xl:hidden">
               {isItOpen ? (
                 <button className="z-20" onClick={handleIsItOpen}>
-                  <i className="bx bx-x text-4xl small:text-5xl large:text-6xl"></i>
+                  <i className="bx bx-x text-4xl dark:text-gray-50 small:text-5xl large:text-6xl"></i>
                 </button>
               ) : (
                 <button className="z-20" onClick={handleIsItOpen}>
-                  <i className="bx bx-menu text-4xl small:text-5xl large:text-6xl"></i>
+                  <i className="bx bx-menu text-4xl dark:text-gray-50 small:text-5xl large:text-6xl"></i>
                 </button>
               )}
             </div>
@@ -96,8 +96,8 @@ const Header = () => {
                     isPending
                       ? ""
                       : isActive
-                      ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                      : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
+                      ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600 dark:border-b-indigo-900 dark:bg-indigo-600 dark:text-gray-50  dark:active:border-b-teal-900 dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600"
+                      : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 dark:border-indigo-600 dark:text-gray-50 dark:hover:border-teal-600 dark:hover:bg-teal-400 dark:active:border-b-teal-900 dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600"
                   }
                   caseSensitive
                 >

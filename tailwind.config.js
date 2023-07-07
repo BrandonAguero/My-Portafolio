@@ -12,6 +12,10 @@ export default {
         normal: "600px",
         "2md": "880px",
       },
+      backgroundImage: {
+        logoLight: "url('/png/logoHomeLight.png')",
+        logoDark: "url('/png/logoHomeDark.png')",
+      },
     },
   },
   plugins: [],

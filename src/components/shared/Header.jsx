@@ -27,14 +27,14 @@ const Header = () => {
 
   return (
     <header className="flex min-h-[8rem] w-full">
-      <nav className="fixed top-0 z-10 flex h-24 w-full flex-col justify-center bg-gray-100 xl:flex-row xl:items-center xl:justify-between">
+      <nav className="fixed top-0 z-10 flex h-24 w-full flex-col justify-center bg-gray-100 dark:bg-gray-900 xl:flex-row xl:items-center xl:justify-between">
         <ul className="flex w-full items-center justify-between px-2 xl:w-max">
           <li className="flex h-max w-max items-center justify-center">
-            <NavLink to="/" caseSensitive>
-              <img
-                className="h-44 w-56 object-contain max-sm:h-12 small:h-16 large:h-20"
-                src="/png/logoHome.png"
-              />
+            <NavLink to="/" className="flex items-center" caseSensitive>
+              <span className="inline-block h-12 w-12 bg-logoLight bg-contain bg-center bg-no-repeat dark:bg-logoDark small:h-14 small:w-14 large:h-16 large:w-16"></span>
+              <span className="font-serif text-3xl font-semibold text-gray-900 dark:text-gray-50 small:text-4xl">
+                Brandon.A
+              </span>
             </NavLink>
           </li>
           <li className="h-max w-max">
@@ -56,7 +56,7 @@ const Header = () => {
             isItOpen ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
           } max-xl:transition-transform max-xl:duration-500`}
         >
-          <ul className="flex items-center gap-2 bg-gray-100 max-xl:h-screen max-xl:flex-col max-xl:justify-center max-sm:gap-4 small:gap-6 medium:gap-8 sm:absolute sm:right-0 sm:w-96 xl:static xl:w-max">
+          <ul className="flex items-center gap-2 text-gray-50 max-xl:h-screen max-xl:flex-col max-xl:justify-center max-sm:gap-4 small:gap-6 medium:gap-8 sm:absolute sm:right-0 sm:w-96 xl:static xl:w-max">
             <li onClick={handleIsItOpen} className="xl:hidden">
               <NavLink to="/">
                 <img

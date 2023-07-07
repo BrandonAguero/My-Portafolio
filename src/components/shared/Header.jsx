@@ -19,6 +19,29 @@ const Header = () => {
     setIsItOpen(!isItOpen);
   };
 
+  const routes = [
+    {
+      path: "/about-me",
+      name: "Acerca de mí",
+    },
+    {
+      path: "/projects",
+      name: "Proyectos",
+    },
+    {
+      path: "/contact-me",
+      name: "Contáctame",
+    },
+    {
+      path: "/education",
+      name: "Educación",
+    },
+    {
+      path: "/skills",
+      name: "Habilidades",
+    },
+  ];
+
   const spring = {
     type: "spring",
     stiffness: 700,
@@ -65,81 +88,23 @@ const Header = () => {
                 />
               </NavLink>
             </li>
-            <li onClick={handleIsItOpen} className="w-max">
-              <NavLink
-                to="/about-me"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                    : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                }
-                caseSensitive
-              >
-                Acerca de mí
-              </NavLink>
-            </li>
-            <li onClick={handleIsItOpen} className="w-max">
-              <NavLink
-                to="/projects"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                    : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                }
-                caseSensitive
-              >
-                Proyectos
-              </NavLink>
-            </li>
-            <li onClick={handleIsItOpen} className="w-max">
-              <NavLink
-                to="/contact-me"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                    : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                }
-                caseSensitive
-              >
-                Contáctame
-              </NavLink>
-            </li>
-            <li onClick={handleIsItOpen} className="w-max">
-              <NavLink
-                to="/education"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                    : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                }
-                caseSensitive
-              >
-                Educación
-              </NavLink>
-            </li>
-            <li onClick={handleIsItOpen} className="w-max">
-              <NavLink
-                to="/skills"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? ""
-                    : isActive
-                    ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                    : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
-                }
-                caseSensitive
-              >
-                Habilidades
-              </NavLink>
-            </li>
+            {routes.map((route) => (
+              <li key={route.path} onClick={handleIsItOpen} className="w-max">
+                <NavLink
+                  to={route.path}
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? ""
+                      : isActive
+                      ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
+                      : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 active:bg-gradient-to-tr active:from-green-500 active:to-green-600"
+                  }
+                  caseSensitive
+                >
+                  {route.name}
+                </NavLink>
+              </li>
+            ))}
             <li className="absolute right-4 top-[45%] small:right-8 medium:right-12 large:right-16 super:right-24 normal:right-36 sm:right-8 xl:static">
               <div
                 className="switch"

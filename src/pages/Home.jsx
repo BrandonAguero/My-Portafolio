@@ -17,14 +17,14 @@ const Home = () => {
       <div className="flex flex-col-reverse items-center gap-4 md:flex-row md:px-4 lg:px-6 xl:px-8">
         <section className="flex w-[95%] flex-col gap-2 medium:gap-4 super:gap-6 2md:gap-8">
           <div className="flex flex-col gap-2 super:gap-4">
-            <h1 className="flex flex-col font-serif text-3xl font-bold text-gray-800 small:text-4xl super:text-5xl 2md:text-6xl xl:text-7xl">
+            <h1 className="flex flex-col font-serif text-3xl font-bold text-gray-800 dark:text-gray-50 small:text-4xl super:text-5xl 2md:text-6xl xl:text-7xl">
               <span>Hola,</span>
               <span>soy Brandon Agüero</span>
             </h1>
-            <h2 className="font-serif text-xl font-semibold text-gray-700 small:text-2xl super:text-3xl 2md:text-4xl xl:text-5xl">
+            <h2 className="font-serif text-xl font-semibold text-gray-700 dark:text-gray-100 small:text-2xl super:text-3xl 2md:text-4xl xl:text-5xl">
               Frontend Developer
             </h2>
-            <p className="font-sans text-base font-normal text-gray-600 small:text-lg super:text-xl 2md:text-2xl xl:text-3xl">
+            <p className="font-sans text-base font-normal text-gray-600 dark:text-gray-200 small:text-lg super:text-xl 2md:text-2xl xl:text-3xl">
               ¡Bienvenido a mi página web! Soy estudiante de Academlo. Explora
               mis proyectos y habilidades, y no dudes en contactarme para
               colaborar en emocionantes proyectos.
@@ -39,7 +39,7 @@ const Home = () => {
                   className="group relative inline-flex items-center gap-1 font-mono"
                 >
                   <i className="bx bxl-linkedin bx-tada text-blue-500"></i>
-                  <span className="text-base text-gray-600 small:text-xl">
+                  <span className="text-base text-gray-600 dark:text-gray-300 small:text-xl">
                     LinkedIn
                   </span>
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 w-full origin-left scale-x-0 transform bg-blue-500 transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -51,11 +51,11 @@ const Home = () => {
                   target="_blank"
                   className="group relative inline-flex items-center gap-1 font-mono"
                 >
-                  <i className="bx bxl-github bx-tada text-gray-800"></i>
-                  <span className="text-base text-gray-600 small:text-xl">
+                  <i className="bx bxl-github bx-tada text-gray-800 dark:text-gray-50"></i>
+                  <span className="text-base text-gray-600 dark:text-gray-300 small:text-xl">
                     Github
                   </span>
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 w-full origin-left scale-x-0 transform bg-gray-800 transition-transform duration-300 group-hover:scale-x-100"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 w-full origin-left scale-x-0 transform bg-gray-800 transition-transform duration-300 group-hover:scale-x-100 dark:bg-gray-50"></span>
                 </a>
               </li>
               <li className="text-base">
@@ -66,7 +66,7 @@ const Home = () => {
                   className="group relative inline-flex items-center gap-1 font-mono"
                 >
                   <i className="bx bxl-whatsapp bx-tada text-green-500"></i>
-                  <span className="text-base text-gray-600 small:text-xl">
+                  <span className="text-base text-gray-600 dark:text-gray-300 small:text-xl">
                     WhatsApp
                   </span>
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 w-full origin-left scale-x-0 transform bg-green-500 transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -80,7 +80,7 @@ const Home = () => {
                   className="group relative inline-flex items-center gap-1 font-mono"
                 >
                   <i className="bx bxl-gmail bx-tada text-red-600"></i>
-                  <span className="text-base text-gray-600 small:text-xl">
+                  <span className="text-base text-gray-600 dark:text-gray-300 small:text-xl">
                     Gmail
                   </span>
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 w-full origin-left scale-x-0 transform bg-red-600 transition-transform duration-300 group-hover:scale-x-100"></span>
@@ -103,8 +103,13 @@ const Home = () => {
           whileHover={{ scale: 1.05 }}
         >
           <motion.img
-            className="h-full w-full rounded-full object-cover object-top md:rounded-xl"
+            className="h-full w-full rounded-full object-cover object-top dark:hidden md:rounded-xl"
             src="/png/profileHomeTwo.png"
+            alt="Foto de perfil del creador de la página web"
+          />
+          <motion.img
+            className="hidden h-full w-full rounded-full object-cover object-top dark:block md:rounded-xl"
+            src="/png/profileHome.png"
             alt="Foto de perfil del creador de la página web"
           />
         </motion.figure>

@@ -11,7 +11,6 @@ const Header = () => {
 
   const toggleSwitch = () => {
     setIsItDark(!isItDark);
-
     if (isItDark) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
@@ -21,6 +20,8 @@ const Header = () => {
     }
   };
 
+  console.log(localStorage.getItem("theme"));
+
   useEffect(() => {
     if (
       localStorage.getItem("theme") === "dark" ||
@@ -28,9 +29,11 @@ const Header = () => {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
-      setIsItDark(!isItDark);
-    } else {
+      setIsItDark(true);
+    }
+    if (localStorage.getItem("theme") === "light") {
       document.documentElement.classList.remove("dark");
+      setIsItDark(false);
     }
   }, []);
 

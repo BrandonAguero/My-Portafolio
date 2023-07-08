@@ -20,8 +20,6 @@ const Header = () => {
     }
   };
 
-  console.log(localStorage.getItem("theme"));
-
   useEffect(() => {
     if (
       localStorage.getItem("theme") === "dark" ||
@@ -111,7 +109,7 @@ const Header = () => {
           </li>
         </ul>
         <div
-          className={`z-10 w-full bg-gray-100 max-xl:fixed max-xl:top-0 max-xl:h-screen max-xl:transform sm:bg-transparent sm:backdrop-brightness-90 xl:w-max  xl:px-2 xl:backdrop-brightness-100 ${
+          className={`z-10 w-full min-w-[320px] bg-gray-100 max-xl:fixed max-xl:top-0 max-xl:h-screen max-xl:transform sm:bg-transparent sm:backdrop-brightness-90  xl:w-max xl:px-2 xl:backdrop-brightness-100 ${
             isItOpen ? "max-xl:translate-x-0" : "max-xl:translate-x-full"
           } max-xl:transition-transform max-xl:duration-500`}
         >
@@ -119,11 +117,11 @@ const Header = () => {
             <li onClick={handleIsItOpen} className="xl:hidden">
               <NavLink to="/">
                 <img
-                  className="w-64 object-contain dark:hidden"
+                  className="w-64 object-contain dark:hidden max-small:w-56"
                   src="/png/logoFooterLight.png"
                 />
                 <img
-                  className="hidden w-64 object-contain dark:block"
+                  className="hidden w-64 object-contain dark:block max-small:w-56"
                   src="/png/logoFooterDark.png"
                 />
               </NavLink>
@@ -136,8 +134,8 @@ const Header = () => {
                     isPending
                       ? ""
                       : isActive
-                      ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600 dark:border-b-indigo-900 dark:bg-indigo-600 dark:text-gray-50  dark:active:border-b-teal-900 dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600"
-                      : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 dark:border-indigo-600 dark:text-gray-50 dark:hover:border-teal-600 dark:hover:bg-teal-400 dark:active:border-b-teal-900 dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600"
+                      ? "flex w-36 cursor-pointer justify-center rounded-lg border-b-4 border-b-blue-800 bg-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-b-green-900 hover:bg-green-600 active:bg-gradient-to-tr active:from-green-500 active:to-green-600 dark:border-b-indigo-900 dark:bg-indigo-600 dark:text-gray-50 dark:active:border-b-teal-900  dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600 max-small:p-2"
+                      : "flex w-36 cursor-pointer justify-center rounded-lg border border-b-4 border-blue-500 p-3 font-serif font-semibold text-gray-900 hover:border-green-600 hover:bg-green-50 hover:bg-gradient-to-tr active:border-b-green-800 dark:border-indigo-600 dark:text-gray-50 dark:hover:border-teal-600 dark:hover:bg-teal-400 dark:active:border-b-teal-900 dark:active:bg-gradient-to-tr dark:active:from-teal-500 dark:active:to-teal-600 max-small:p-2"
                   }
                   caseSensitive
                 >

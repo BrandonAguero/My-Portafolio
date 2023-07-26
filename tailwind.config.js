@@ -11,6 +11,7 @@ export default {
         super: "540px",
         normal: "600px",
         "2md": "880px",
+        tall: { raw: "(min-height: 800px)" },
       },
       backgroundImage: {
         logoLight: "url('/png/logoHomeLight.png')",
